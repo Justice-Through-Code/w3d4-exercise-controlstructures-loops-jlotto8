@@ -1,10 +1,8 @@
 
 days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
-
-
-def day_of_week():
     # Let's start simple, and build up from there.
     # 1.1 TODO: Write a for loop that prints out each day in the `days` variable above.
+def day_of_week():
     for day in days:
         print(day)
     # 1.2 TODO: Write another for loop that does the same thing, but this time use the range function
