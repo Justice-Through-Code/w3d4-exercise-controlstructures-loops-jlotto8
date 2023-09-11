@@ -94,4 +94,4 @@ def temp_by_day_continuous():
     # NOTE: If you accidentally create an infinite while loop, it's ok! Go into the command line and
     # hit control + C to stop the program. No harm has been done to your computer.
 
-temp_by_day_continuous()
+# temp_by_day_continuous()
