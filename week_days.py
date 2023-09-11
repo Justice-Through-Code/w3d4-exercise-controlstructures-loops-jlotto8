@@ -5,15 +5,27 @@ days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Satur
 def day_of_week():
     # Let's start simple, and build up from there.
     # 1.1 TODO: Write a for loop that prints out each day in the `days` variable above.
-
+    for day in days:
+        print(day)
     # 1.2 TODO: Write another for loop that does the same thing, but this time use the range function
+    for i in range(len(days)):
+        print(days[i])
+# day_of_week()
 
 
 def favorite_activities():
     # 2.1 TODO: Now, in a for loop, instead of just printing out the day,
     # let's ask the user what their favorite thing to do is on that day of the week.
     # NOTE: Make sure to use an f-string so that the user knows which day they're being asked about.
+    list_of_activities = []
+    for day in days:
+        fav_thing_each_day = input(f' What is your favorite thing to do on {days}')
+        list_of_activities.append(fav_thing_each_day)
+    print(fav_thing_each_day)
+    print(list_of_activities)
 
+    for i in range(len(days)):
+        print(f' On {days[i]}s, your favorite activity is to {list_of_activities[i]}.')
     # We should keep track of the user's favorite things to do so that we can print them out all together.
     # 2.2 TODO: ABOVE your for loop, create a new empty list to hold the user's favorite activities.
 
@@ -30,21 +42,22 @@ def favorite_activities():
     # you need to print out.
 
 
-'''
-    Take a look back at the code you just wrote. Look at how much it does!
+# '''
+#     Take a look back at the code you just wrote. Look at how much it does!
 
-    Often, programmers will be given large tasks, and it's our responsibility to be able to break it down into
-    smaller pieces. We did the above piece by piece.  Now think about what the prompt might have been
-    to get us there.
+#     Often, programmers will be given large tasks, and it's our responsibility to be able to break it down into
+#     smaller pieces. We did the above piece by piece.  Now think about what the prompt might have been
+#     to get us there.
 
-    Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
-    Afterward, print out for the user each of their favorite daily activities.
+#     Maybe: Write a program that asks the user about their favorite thing to do each day of the week.
+#     Afterward, print out for the user each of their favorite daily activities.
 
-    Would this larger task have felt doable without breaking it down into steps?
-    Is it clear what needs to be done?
+#     Would this larger task have felt doable without breaking it down into steps?
+#     Is it clear what needs to be done?
 
-    Try to break down the steps required for this second loop challenge.
-'''
+#     Try to break down the steps required for this second loop challenge.
+# '''
+# favorite_activities()
 
 
 def temp_by_day():
@@ -53,11 +66,34 @@ def temp_by_day():
     # between 50 and 65, tell the user to 'Cozy, grab a sweater'. Finally, if the temperature is above 65,
     # tell the user to 'Put on some sunscreen!'.
 
+    for day in days:
+        daily_temp = int(input(f' Today is {day} what is the temperature outside?'))
+        print(daily_temp)
+        if daily_temp < 50:
+            print('Brr, put on a jacket!')
+        elif daily_temp >= 50 and daily_temp <= 65:
+            print('Cozy, grab a sweater')
+        elif daily_temp >  65:
+            print('Put on some sunscreen!')
+
+# temp_by_day()
 
 def temp_by_day_continuous():
     # 4 TODO: Write a program that asks the user what temperature it is outside. While the temperature is below 65,
     # tell the user to wear a sweater. Once the temperature is over 65, stop looping, and tell the user that
     # Spring has sprung!
+    # temp_outside = 0
+    temp = int(input("What is the temperature outside? "))
+    while temp <= 65:
+        print("Wear a sweater")
+        temp = int(input("What is the temperature outside? "))
+        # print(temp)
+        # if temp >65:
+    print("Spring has sprung!")
+        # break
+        
 
     # NOTE: If you accidentally create an infinite while loop, it's ok! Go into the command line and
     # hit control + C to stop the program. No harm has been done to your computer.
+
+temp_by_day_continuous()
