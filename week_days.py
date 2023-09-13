@@ -17,13 +17,12 @@ def favorite_activities():
     # NOTE: Make sure to use an f-string so that the user knows which day they're being asked about.
     list_of_activities = []
     for day in days:
-        fav_thing_each_day = input(f' What is your favorite thing to do on {days}')
+        fav_thing_each_day = input(f'What is your favorite thing to do on {day}s')
         list_of_activities.append(fav_thing_each_day)
-    print(fav_thing_each_day)
     print(list_of_activities)
 
     for i in range(len(days)):
-        print(f' On {days[i]}s, your favorite activity is to {list_of_activities[i]}.')
+        print(f'On {days[i]}s, your favorite activity is to {list_of_activities[i]}.')
     # We should keep track of the user's favorite things to do so that we can print them out all together.
     # 2.2 TODO: ABOVE your for loop, create a new empty list to hold the user's favorite activities.
 
@@ -66,7 +65,6 @@ def temp_by_day():
 
     for day in days:
         daily_temp = int(input(f' Today is {day} what is the temperature outside?'))
-        print(daily_temp)
         if daily_temp < 50:
             print('Brr, put on a jacket!')
         elif daily_temp >= 50 and daily_temp <= 65:
